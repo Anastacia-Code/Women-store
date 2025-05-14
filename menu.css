@@ -1,0 +1,137 @@
+:root {
+    --green-1: #26643b;
+    --green-2: #a2de96;
+    --lightgreen-1: #d6e5d8;
+    --lightgreen-2: #f5fcf4;
+    --black-1: #130c0c;
+    --black-2: #3f3c3c;
+    --black-3: #5b6359;
+    --white-1: #e8e8e8;
+    --light-purple: #f4cff4;
+}
+#page__title
+{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+.page__title__text{
+    font-size: 2.2rem;
+    color: var(--black-1);
+}
+
+/* Special Menu */
+#ourspecials{
+    padding: 0;
+}
+.specials__title{
+    font-size: 1.8rem;
+    color: var(--black-1);
+    margin-bottom: 2rem;
+}
+.specials__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 400px;
+}
+.specials__item{
+    flex: 1;
+    gap: 2rem;
+    background-color: var(--light-purple);
+    padding: 1.5rem;
+    border-radius: 12px;
+    
+}
+.specials__item__img,
+.specials__item__info{
+    flex: 1;
+}
+.specials__item__img img{
+    object-fit: cover;
+    
+}
+.specials__item__img img{
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+    
+}
+.specials__item__title{
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--black-1);
+    line-height: 1.2em;
+
+}
+.specials__item__price{
+    font-size: 1.8rem;
+    color: var(--green-1);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.specials__item__stars{
+    width: max-content;
+    height: 10rem;
+    margin-top: -3rem;
+}
+@media only screen and (min-width: 768px) {
+    #page__title {
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+        }
+     .page__title__text {
+            font-size: 3.6rem;
+        }
+    .specials__title{
+        font-size: 2.4rem;
+    } 
+    .specials__wrapper{
+        flex-direction: row;
+        gap: 2rem;
+        max-width: none;
+    }
+    .specials__item{
+        padding: 3rem;
+        gap: 2rem;
+    }
+    .specials__item__title{
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    .specials__item__price{
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+    .specials__wrapper {
+       display: flex;
+       flex-direction: row;
+       gap: 3rem;
+    
+        }
+   .specials__item {
+    display: flex;
+         flex: 1;
+
+}
+#clothgrid:last-of-type {
+    padding-bottom: 10rem;
+}
+}
+
+@media only screen and (min-width: 1100px){
+    .specials__item__img{
+        flex: 4;
+    }
+    .specials__item__info{
+        flex: 3;
+    }
+}
+
+#clothgrid{
+    padding-bottom: 0;
+}
+.clothgrid:last-of-type{
+    padding-bottom: 10rem;
+}
+}

@@ -1,0 +1,346 @@
+:root {
+    --green-1: #26643b;
+    --green-2: #a2de96;
+    --lightgreen-1: #d6e5d8;
+    --lightgreen-2: #f5fcf4;
+    --black-1: #130c0c;
+    --black-2: #3f3c3c;
+    --black-3: #5b6359;
+    --white-1: #e8e8e8;
+    --light-purple: #f4cff4;
+}
+.nav{
+    padding: 2rem 0;
+
+}
+ .nav__icon,
+.nav__close
+{
+    display:none;
+}  
+.nav__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__list li{
+display: inline-block;
+margin: 0 1rem;
+}
+.nav__list .nav__link{
+    font-size: 2rem;
+    font-family: 'poppins';
+    color: var(--black-1);
+    padding: 0.5rem;
+}
+.nav__list li:hover .nav__link{
+    color: var(--green-1);
+}
+@media only screen and (max-width: 768px){
+    .nav{
+        position: relative;
+    }
+    .nav__icon{
+        display: block;
+    }
+    .nav__icon svg,
+    .nav__close svg{
+        pointer-events: none;
+        height: 30px;
+        width: 30px;
+    }
+    .nav__close{
+        display: block;
+        position: absolute;
+        color: var(--black-1);
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    .nav__list{
+        z-index: 1000;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100vh;
+        width: 40%;
+        background-color: var(--lightgreen-2);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 2rem;
+        transform: translateX(0%);
+        overflow: hidden;
+        transition: 0.3s ease-in transform;
+    }
+     .nav__list.show{
+        transform: translateX(-100%);
+    } 
+    .nav__list li{
+        display: block;
+        text-align: right;
+        margin-bottom: 2rem;
+     }
+    .nav__list a{
+        font-size: 1.6rem;
+    } 
+    .nav__bgoverlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        height: 100vh;
+        width: 100%;
+        background:rgba(107, 158, 158, 0.808);
+        display: none;
+}
+.nav__bgoverlay.active{
+    display: block;
+}
+}
+
+@media only screen and (min-width: 768px) {
+    .btn{
+        padding: 1.3rem 2rem;
+        font-size: 2rem;
+    }  
+}
+/* For Smaller Device */
+/* Footer Styles */
+footer{
+    background: var(--lightgreen-1);
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+.footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.footer__logo{
+    width: 80px;
+    margin-bottom: 2rem;
+}
+.footer__desc
+{
+    font-size: 1.4rem;
+    color: var(--black-2);
+    margin-bottom: 2rem;
+}
+.footer__socials__title{
+    font-size: 1.8rem;
+    color: var(--black-1);
+    margin-bottom: 1rem;
+}
+.footer__socials li{
+    display: inline-block;
+    
+}
+.footer__socials a{
+    padding: 0.5rem 0.8rem;
+    background: var(--white-1);
+    border: 1px solid var(--green-2);
+    border-radius: 8px;
+}
+.footer__socials svg{
+    width: 20px;
+    color: var(--black-2);
+}
+.footer__text__title{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--black-1);
+    font-weight: 600;
+    
+}
+.footer__text  li {
+    list-style: none;
+}
+
+.footer__text a 
+{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--black-2);
+    font-family: 'raleway';
+    font-weight: 500;
+    line-height: 1.4em;
+    
+}
+    #copyright {
+            padding:12rem 0;
+            margin-top: -10rem;
+        }
+        .copyright__text {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+@media only screen and (min-width: 768px) 
+{
+    footer{
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    
+}
+.footer__wrapper{
+    flex-direction: row;
+}
+.footer__col1{
+    flex: 4;
+}
+.footer__col2,
+.footer__col3,
+.footer__col4{
+    flex: 2;
+}
+.footer__desc{
+    max-width: 300px;
+    font-size: 2.5rem;
+     margin-bottom: 2.5rem;
+    
+}
+.footer__social__title,
+.footer__text__title,
+.footer__text a{
+    font-size: 2rem;
+}
+}
+@media only screen and (min-width: 768px){
+    .copyright__text{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+}
+/* Store Info */
+#storeinfo{
+    padding: 10rem;
+}
+.storeinfo__wrapper{
+   display: flex;
+   flex-direction: row;
+   align-items: stretch;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+.storeinfo__item{
+   background: var(--lightgreen-1);
+   padding: 20px 20px ;
+   text-align: center;
+   border-radius: 12px;
+   width: 150px;
+}
+.storeinfo__icon{
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.storeinfo__title{
+    font-size: 1.4rem;
+    font-family: poppins;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--black-1);
+}
+.storeinfo__text{
+    font-size: 1.4rem;
+    font-family: 'raleway';
+    color: var(--black-2);
+}
+@media only screen and (min-width: 768px) 
+{
+  .storeinfo__wrapper{
+    gap: 2rem;
+
+  }  
+  .storeinfo__item{
+    min-width: 200px;
+    padding: 40px 0;
+  }
+  .storeinfo__icon{
+    width: 47px;
+    margin-bottom: 1rem;
+  }
+  .storeinfo__title,
+  .storeinfo__text{
+    font-size: 2rem;
+  }
+}
+/* Clothgrid */
+.clothgrid__title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--black-1);
+}
+
+.clothgrid__wrapper {
+    display:grid ;
+    grid-template-columns: repeat(autofit, minmax(140px,  1fr));
+    gap: 1rem;
+}
+.clothgrid__item{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgreen-1);
+    padding: 0.5rem;
+    gap: 0.5rem;
+    border-radius: 12px;
+    width: 250px;
+    margin: 0 auto;
+}
+.clothgrid__item__img{
+    flex: 4;
+}
+.clothgrid__item__info{
+    flex: 5;
+}
+.clothgrid__item__img img{
+    object-fit: cover;
+    border-radius: 15px;
+    width: 250px;
+    
+}
+.clothgrid__item__title{
+    font-size: 1.5rem;
+    line-height: 1.3em;
+    font-weight: 500;
+    color: var(--black-1);
+    margin-bottom: 1rem;
+}
+.clothgrid__item__price{
+    font-size: 1.6rem;
+    color: var(--green-1);
+    font-family: 600;
+    margin-bottom: 0.5rem;
+}
+.clothgrid__item__stars{
+       height: 10rem;
+        max-width: max-content;
+        margin-top: -3rem;      
+}
+@media only screen and (min-width: 768px) {
+    .clothgrid__title{
+        font-size:2.4rem
+    }
+    .clothgrid__wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .clothgrid__item{
+        flex-direction: row;
+        padding: 1.5rem;
+        border-radius: 12px;
+        width: 450px;
+    }
+    .clothgrid__item__price{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .clothgrid__item__title{
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+}
